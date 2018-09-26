@@ -1,7 +1,9 @@
 import React, { Component} from 'react'
 import {Router, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
-import Vote from './containers/Vote/index'
+
+import Vote from './containers/Vote'
+import Info from './components/Info'
 
 
 const history = createBrowserHistory()
@@ -26,12 +28,14 @@ export default class App extends Component {
                         <ul className="nav justify-content-center">
                             <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
                             <li className="nav-item"><Link className="nav-link" to='/registration'>Registration</Link></li>
+                            <li className="nav-item"><Link className="nav-link" to='/info'>Info</Link></li>
                             <li className="nav-item"><Link className="nav-link" to='/vote'>Vote</Link></li>
                         </ul>
 
 
                     <Route exact path="/" component={Home}/>
                     <Route path="/registration" component={Registration}/>
+                    <Route path="/info" component={Info}/>
                     <Route path="/vote" component={Vote}/>
                 </div>
             </Router>
