@@ -1,9 +1,8 @@
 import React, { Component} from 'react'
 import {Router, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
+import Vote from './containers/Vote/index'
 
-// import { Provider } from 'react-redux'
-// import store from './store/store'
 
 const history = createBrowserHistory()
 
@@ -16,12 +15,6 @@ const Home = () => (
 const Registration = () => (
     <div>
         <h2>Registration</h2>
-    </div>
-)
-
-const Vote = () => (
-    <div>
-        <h2>Vote</h2>
     </div>
 )
 
@@ -41,7 +34,6 @@ export default class App extends Component {
                     <Route path="/registration" component={Registration}/>
                     <Route path="/vote" component={Vote}/>
                 </div>
-
             </Router>
         )
     }
