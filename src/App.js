@@ -3,7 +3,8 @@ import {Router, Route, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import Vote from './containers/Vote'
-import Info from './components/Info'
+import Info from './containers/Info'
+import Head from './components/Head/Head'
 
 
 const history = createBrowserHistory()
@@ -24,19 +25,17 @@ export default class App extends Component {
     render(){
         return(
             <Router history={history}>
-                <div className="container">
-                        <ul className="nav justify-content-center">
-                            <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to='/registration'>Registration</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to='/info'>Info</Link></li>
-                            <li className="nav-item"><Link className="nav-link" to='/vote'>Vote</Link></li>
-                        </ul>
-
-
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/registration" component={Registration}/>
-                    <Route path="/info" component={Info}/>
-                    <Route path="/vote" component={Vote}/>
+                <div className="wrapper">
+                    <Head />
+                    <div className="container">
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/registration" component={Registration}/>
+                        <Route path="/info" component={Info}/>
+                        <Route path="/vote" component={Vote}/>
+                    </div>
+                    <div className="footer">
+                        <span>Develop by eagleweb</span>
+                    </div>
                 </div>
             </Router>
         )

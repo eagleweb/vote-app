@@ -13,6 +13,7 @@ class Vote extends Component {
                         </ul>
                     ))}
                 </div>
+
             </div>
             )
     }
