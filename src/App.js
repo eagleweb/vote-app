@@ -34,7 +34,7 @@ export default class App extends Component {
                         <Route path="/vote" component={Vote}/>
                     </div>
                     <div className="footer">
-                        <span>Develop by eagleweb</span>
+                        <span>Develop by eagleweb 2018</span>
                     </div>
                 </div>
             </Router>
