@@ -10,6 +10,7 @@ const cors = require('cors');
 const config = require('./config');
 const path = require('path');
 const helmet = require('helmet');
+const questionRouter = require ("./backend/routes/questionRouter");
 
 
 // connect to DB on Mongolab
@@ -37,7 +38,7 @@ app.use(morgan('dev'));
 
 // ROUTES FOR API =====================================================
 
-// app.use('/api/data', movieRouter);
+app.use('/api/question', questionRouter);
 
 
 //START SERVER ========================================================

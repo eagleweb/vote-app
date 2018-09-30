@@ -1,6 +1,6 @@
 module.exports = {
     'port': process.env.PORT || 8081,
-    'database': 'mongodb://eagleweb:751803os@ds155529.mlab.com:55529/db-spa',
+    'database': 'mongodb://eagleweb:751803qwerty@ds115543.mlab.com:15543/db-vote-app',
     'corsOptions': {
         origin: 'http://localhost:8081',
         preflightContinue: true,

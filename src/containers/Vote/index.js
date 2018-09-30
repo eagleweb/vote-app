@@ -5,15 +5,17 @@ class Vote extends Component {
     render() {
         return(
             <div>
-                <h2>Vote</h2>
+                <h1>Vote</h1>
+                <hr/>
                 <div>
-                    {Object.keys(this.props.questionList).map(questionId => (
-                        <ul key={questionId}>
-                            <li>{this.props.questionList[questionId]}</li>
-                        </ul>
-                    ))}
+                    <h3>Add question</h3>
+                    <div className="input-group mb-3">
+                        <input type="text" className="form-control" placeholder="Type your question" />
+                            <div className="input-group-append">
+                                <button className="btn btn-outline-secondary" type="button" id="button-addon2">Add</button>
+                            </div>
+                    </div>
                 </div>
-
             </div>
             )
     }
