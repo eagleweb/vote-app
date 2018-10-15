@@ -38,7 +38,7 @@ app.use(morgan('dev'));
 
 // ROUTES FOR API =====================================================
 
-app.use('/api/question', questionRouter);
+app.use('/api/questions', questionRouter);
 
 
 //START SERVER ========================================================

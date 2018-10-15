@@ -1,8 +1,16 @@
 import React, { Component} from 'react'
 import { connect } from 'react-redux'
+import { getQuestions } from '../../actions/questionActions'
+import PropTypes from 'prop-types';
 
 class Vote extends Component {
+
+    componentDidMount() {
+        this.props.getQuestions();
+    }
+
     render() {
+        const questions = this.props.questions;
         return(
             <div>
                 <h1>Vote</h1>
@@ -16,15 +24,29 @@ class Vote extends Component {
                             </div>
                     </div>
                 </div>
+                <div>
+                    {console.log(questions)}
+                </div>
             </div>
             )
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        questionList: state.questionList
-    }
-}
+// Vote.propTypes = {
+//     getItems: PropTypes.func.isRequired,
+//     item: PropTypes.object.isRequired
+// };
 
-export default connect(mapStateToProps)(Vote)
+const mapStateToProps = state => {
+    return {
+        questions: state.questionReducer.questions
+    }
+};
+
+// const mapDispatchToProps = () => {
+//     return {
+//         getQuestions: getQuestions
+//     }
+// };
+
+export default connect(mapStateToProps, {getQuestions})(Vote)
