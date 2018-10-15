@@ -17,7 +17,7 @@ const Home = () => (
 
 const Registration = () => (
     <div>
-        <h2>Registratio</h2>
+        <h2>Registration</h2>
     </div>
 )
 

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
-import questionList from './questions'
+import questionReducer from './questions'
 import counter from './counter'
 
 const rootReducer = combineReducers({
-    questionList,
+    questionReducer,
     counter
-})
+});
 
 export default rootReducer

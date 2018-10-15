@@ -5,10 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/css/style.css'
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import rootReducer from './reducers/index'
-
-const store = createStore(rootReducer)
+import store from './store'
 
 ReactDOM.render(
     <Provider store={store}>
