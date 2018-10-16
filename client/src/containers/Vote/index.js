@@ -10,7 +10,8 @@ class Vote extends Component {
     }
 
     render() {
-        const questions = this.props.questions;
+        const {questions} = this.props.questions;
+        console.log(questions);
         return(
             <div>
                 <h1>Vote</h1>
@@ -24,22 +25,24 @@ class Vote extends Component {
                             </div>
                     </div>
                 </div>
-                <div>
-                    {console.log(questions)}
+                    {questions.map(({ _id, question }) => (
+                        <span key={_id}>
+                            {question}
+                        </span>
+                    ))}
                 </div>
-            </div>
             )
     }
 }
 
 // Vote.propTypes = {
-//     getItems: PropTypes.func.isRequired,
-//     item: PropTypes.object.isRequired
+//     getQuestions: PropTypes.func.isRequired,
+//     questions: PropTypes.object.isRequired
 // };
 
 const mapStateToProps = state => {
     return {
-        questions: state.questionReducer.questions
+        questions: state.questions
     }
 };
 

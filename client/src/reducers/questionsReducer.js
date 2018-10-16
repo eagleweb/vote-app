@@ -5,7 +5,7 @@ const initialState = {
     loading: false
 };
 
-export default function questionReducer (state = initialState, action) {
+export default function (state = initialState, action) {
     switch (action.type) {
         case GET_QUESTIONS:
             return {...state, questions: action.payload, loading: false};
