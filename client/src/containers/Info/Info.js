@@ -2,7 +2,7 @@ import React, { Component} from 'react'
 
 export default class InfoComponent extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.onBtnClick = this.onBtnClick.bind(this)
     }
 

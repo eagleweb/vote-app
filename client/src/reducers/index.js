@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
 import questionsReducer from './questionsReducer'
+import counterReducer from './counterReducer'
 
 
 export default combineReducers({
-    questions: questionsReducer
+    questions: questionsReducer,
+    counter: counterReducer
 });
